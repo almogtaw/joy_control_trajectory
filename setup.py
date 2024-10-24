@@ -9,7 +9,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/config', ['config/joystick_mapping.yaml']),
+        ('share/' + package_name + '/config', ['config/joystick_mapping.yaml', 'config/joy_velocity.yaml']),
         ('share/' + package_name + '/launch', ['launch/launch_joystick_mapping.launch.py']),
     ],
     install_requires=['setuptools'],
@@ -21,7 +21,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "joy_velocity_mapper=joy_control_trajectory.joy_velocity_mapper:main"
+            "joy_velocity_mapper=joy_control_trajectory.joy_velocity_mapper:main",
+            "joy_to_multiarray = joy_control_trajectory.joy_to_multiarray:main"
         ],
     },
 )

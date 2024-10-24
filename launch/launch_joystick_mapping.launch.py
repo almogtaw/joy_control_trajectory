@@ -7,14 +7,14 @@ def generate_launch_description():
     config = os.path.join(
         get_package_share_directory('joy_control_trajectory'),
         'config',
-        'joystick_mapping.yaml'
+        'joy_velocity.yaml'
     )
 
     return LaunchDescription([
         Node(
             package='joy_control_trajectory',
-            executable='joy_velocity_mapper',
-            name='joystick_to_trajectory',
+            executable='joy_to_multiarray',
+            name='joy_to_multiarray',
             parameters=[{'config_file': config}]
         )
     ])
