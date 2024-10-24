@@ -17,7 +17,7 @@ joint_mappings:
     max_velocity: 1.0
     invert: false
 
-  - joint: "Joint_5"
+  - joint: "Joint_4"
     axis: 5
     min_velocity: -1.0
     max_velocity: 1.0
