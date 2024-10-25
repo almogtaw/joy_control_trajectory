@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/config', ['config/joystick_mapping.yaml', 'config/joy_velocity.yaml']),
-        ('share/' + package_name + '/launch', ['launch/launch_joystick_mapping.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/launch_joystick_mapping.launch.py', 'launch/launch_joy_traj_mapping.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
