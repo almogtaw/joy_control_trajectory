@@ -73,7 +73,7 @@ class JoyToJointTrajectoryNode(Node):
         # joint_traj_point.positions = [0.0] * len(joint_traj_msg.joint_names)
         joint_traj_point.positions = velocities
         
-        joint_traj_point.velocities = velocities
+        # joint_traj_point.velocities = velocities
         joint_traj_point.time_from_start.sec = 0
         joint_traj_point.time_from_start.nanosec = 100000000  # 0.1 sec
         
